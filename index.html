@@ -1,0 +1,1350 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Viajá | San Andrés en el Puente de Noviembre — Vuelos Avianca + Hotel</title>
+  
+  <!-- SEO & Open Graph para Vista Previa en WhatsApp e Instagram -->
+  <meta name="description" content="¡Escápate a San Andrés del 1 al 4 de Noviembre 2026! Vuelos Avianca con maleta de 23kg, hotel, alimentación y tours. Separa tu cupo con solo $200.000 y paga a cuotas.">
+  <meta name="author" content="Viajá">
+  <meta name="theme-color" content="#0284C7">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Viajá">
+  <meta property="og:title" content="🌴 ¿Nos vamos de Puente a San Andrés? | Viajá">
+  <meta property="og:description" content="Noviembre 1 al 4. Vuelos directos Avianca con maleta de 23kg + Hotel + Tours. Separa tu cupo con $200.000 y paga a cuotas. ¡Cotiza tu hotel favorito aquí!">
+  <meta property="og:image" content="https://tommygit2021.github.io/sanandres-noviembre/assets/imgs/hero-bg.jpeg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://tommygit2021.github.io/sanandres-noviembre/">
+
+  <!-- Favicon SVG Tropical -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🌴</text></svg>">
+
+  <style>
+    :root {
+      --primary: #0284C7;          /* Azul Mar Caribe */
+      --primary-dark: #0369A1;
+      --primary-light: #E0F2FE;
+      --secondary: #0D9488;        /* Turquesa 7 Colores */
+      --secondary-tint: #CCFBF1;
+      --accent-coral: #F97316;     /* Coral Atardecer */
+      --accent-coral-hover: #EA580C;
+      --accent-wa: #25D366;        /* Verde WhatsApp */
+      --accent-wa-hover: #1EBE5B;
+      --bg-main: #F8FAFC;          /* Fondo Claro y Fresco */
+      --bg-surface: #FFFFFF;
+      --bg-subtle: #F1F5F9;
+      --text-main: #0F172A;        /* Grafito Oscuro */
+      --text-muted: #475569;
+      --text-light: #64748B;
+      --border-soft: #E2E8F0;
+      --shadow-sm: 0 4px 12px rgba(2, 132, 199, 0.05);
+      --shadow-md: 0 10px 25px rgba(2, 132, 199, 0.08);
+      --shadow-lg: 0 18px 40px rgba(15, 23, 42, 0.16);
+      --radius-sm: 10px;
+      --radius-md: 16px;
+      --radius-lg: 24px;
+      --font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font);
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* BARRA SUPERIOR STICKY */
+    header {
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border-soft);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .nav-inner {
+      padding: 12px 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 16px;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .brand-logo-badge {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      width: 40px;
+      height: 40px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 900;
+      font-size: 1.3rem;
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+    }
+
+    .brand-text h1 {
+      font-size: 1.35rem;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      color: var(--primary-dark);
+      line-height: 1.1;
+    }
+
+    .brand-text p {
+      font-size: 0.68rem;
+      color: var(--secondary);
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      font-weight: 700;
+    }
+
+    .btn-nav-wa {
+      background: var(--accent-wa);
+      color: #064E3B;
+      font-weight: 700;
+      font-size: 0.88rem;
+      padding: 9px 18px;
+      border-radius: 30px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+      transition: all 0.2s ease;
+      white-space: nowrap;
+    }
+
+    .btn-nav-wa:hover {
+      background: var(--accent-wa-hover);
+      transform: translateY(-2px);
+    }
+
+    /* SUB-BARRA DE NAVEGACIÓN RÁPIDA MÓVIL */
+    .quick-nav {
+      background: #F0F9FF;
+      border-bottom: 1px solid #BAE6FD;
+      overflow-x: auto;
+      white-space: nowrap;
+      padding: 8px 16px;
+      display: flex;
+      gap: 10px;
+      scrollbar-width: none;
+    }
+    .quick-nav::-webkit-scrollbar { display: none; }
+
+    .quick-pill {
+      font-size: 0.78rem;
+      font-weight: 700;
+      padding: 5px 12px;
+      background: #FFFFFF;
+      color: var(--primary-dark);
+      border-radius: 20px;
+      border: 1px solid #BAE6FD;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+    }
+
+    /* HERO SECTION CON FONDO FOTOGRÁFICO DE SAN ANDRÉS */
+    .hero {
+      position: relative;
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.65) 0%, rgba(3, 105, 161, 0.82) 55%, rgba(2, 132, 199, 0.94) 100%),
+                  url('assets/imgs/hero-bg.jpeg') center center / cover no-repeat;
+      padding: 60px 0 50px;
+      text-align: center;
+      color: #FFFFFF;
+      overflow: hidden;
+    }
+
+    .hero-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(255, 255, 255, 0.2);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.4);
+      color: #FFFFFF;
+      padding: 7px 16px;
+      border-radius: 30px;
+      font-size: 0.82rem;
+      font-weight: 800;
+      margin-bottom: 18px;
+      letter-spacing: 0.5px;
+      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    }
+
+    .hero h2 {
+      font-size: 2.45rem;
+      font-weight: 900;
+      line-height: 1.15;
+      letter-spacing: -0.8px;
+      color: #FFFFFF;
+      margin-bottom: 16px;
+      text-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
+    }
+
+    .hero h2 span.highlight-gold {
+      color: #FDE047;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+    }
+
+    .hero p.lead {
+      font-size: 1.15rem;
+      color: #F0F9FF;
+      max-width: 680px;
+      margin: 0 auto 26px;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    }
+
+    .hero-chips {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin-bottom: 30px;
+    }
+
+    .chip {
+      background: rgba(255, 255, 255, 0.92);
+      backdrop-filter: blur(6px);
+      border: 1px solid rgba(255, 255, 255, 0.6);
+      padding: 7px 15px;
+      border-radius: 20px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      color: var(--text-main);
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    }
+
+    .chip strong {
+      color: var(--primary-dark);
+    }
+
+    .hero-cta-box {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .btn-hero-primary {
+      background: linear-gradient(135deg, var(--accent-coral), var(--accent-coral-hover));
+      color: white;
+      font-weight: 800;
+      font-size: 1.08rem;
+      padding: 16px 32px;
+      border-radius: 14px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      box-shadow: 0 10px 28px rgba(249, 115, 22, 0.45);
+      transition: all 0.2s ease;
+      width: 100%;
+      max-width: 390px;
+      justify-content: center;
+    }
+
+    .btn-hero-primary:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 14px 34px rgba(249, 115, 22, 0.55);
+    }
+
+    /* SECCIÓN COTIZADOR INTERACTIVO */
+    .cotizador-section {
+      padding: 30px 0 50px;
+    }
+
+    .cotizador-card {
+      background: var(--bg-surface);
+      border: 1.5px solid #BAE6FD;
+      border-radius: var(--radius-lg);
+      padding: 30px 20px;
+      box-shadow: var(--shadow-md);
+      position: relative;
+    }
+
+    .cotizador-header {
+      text-align: center;
+      margin-bottom: 26px;
+    }
+
+    .cotizador-header h3 {
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: var(--primary-dark);
+      margin-bottom: 6px;
+    }
+
+    .cotizador-header p {
+      color: var(--text-muted);
+      font-size: 0.94rem;
+    }
+
+    .step-title {
+      font-size: 0.88rem;
+      font-weight: 800;
+      color: var(--secondary);
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      margin-bottom: 12px;
+      display: block;
+    }
+
+    .step-group {
+      margin-bottom: 24px;
+    }
+
+    .options-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
+      gap: 10px;
+    }
+
+    .opt-btn {
+      background: var(--bg-subtle);
+      border: 1.5px solid var(--border-soft);
+      border-radius: var(--radius-md);
+      padding: 13px 10px;
+      text-align: center;
+      cursor: pointer;
+      font-weight: 700;
+      font-size: 0.88rem;
+      color: var(--text-main);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 4px;
+      transition: all 0.2s ease;
+      user-select: none;
+    }
+
+    .opt-btn small {
+      font-size: 0.72rem;
+      color: var(--text-light);
+      font-weight: 500;
+    }
+
+    .opt-btn:hover {
+      background: var(--primary-light);
+      border-color: #7DD3FC;
+    }
+
+    .opt-btn.active {
+      background: var(--primary-light);
+      border-color: var(--primary);
+      color: var(--primary-dark);
+      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.15);
+    }
+
+    .opt-btn.active small {
+      color: var(--primary-dark);
+      font-weight: 600;
+    }
+
+    /* RESULTADOS / HOTELES RECOMENDADOS */
+    .results-wrap {
+      margin-top: 30px;
+      border-top: 2px dashed var(--border-soft);
+      padding-top: 24px;
+    }
+
+    .results-title {
+      font-size: 1.28rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .results-subtitle {
+      font-size: 0.86rem;
+      color: var(--text-light);
+      margin-bottom: 20px;
+    }
+
+    .hotels-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    @media (min-width: 768px) {
+      .hotels-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    .hotel-card {
+      background: #FFFFFF;
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-md);
+      padding: 20px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+      position: relative;
+    }
+
+    .hotel-card:hover {
+      transform: translateY(-3px);
+      box-shadow: var(--shadow-md);
+      border-color: #BAE6FD;
+    }
+
+    .hotel-badge-top {
+      position: absolute;
+      top: -10px;
+      right: 16px;
+      background: var(--secondary);
+      color: white;
+      font-size: 0.72rem;
+      font-weight: 800;
+      padding: 3px 10px;
+      border-radius: 20px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    .hotel-badge-top.highlight {
+      background: var(--accent-coral);
+    }
+
+    .hotel-plan-tag {
+      font-size: 0.76rem;
+      font-weight: 800;
+      color: var(--primary-dark);
+      background: var(--primary-light);
+      padding: 3px 10px;
+      border-radius: 6px;
+      display: inline-block;
+      margin-bottom: 8px;
+    }
+
+    .hotel-name {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 8px;
+    }
+
+    .hotel-features {
+      list-style: none;
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      margin-bottom: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .hotel-features li::before {
+      content: "✓ ";
+      color: var(--secondary);
+      font-weight: 800;
+    }
+
+    .hotel-price-box {
+      background: var(--bg-subtle);
+      border-radius: 12px;
+      padding: 12px 14px;
+      margin-bottom: 14px;
+    }
+
+    .hotel-price-label {
+      font-size: 0.74rem;
+      color: var(--text-light);
+      text-transform: uppercase;
+      font-weight: 700;
+    }
+
+    .hotel-price-amount {
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: var(--primary-dark);
+      line-height: 1.1;
+    }
+
+    .hotel-installments {
+      font-size: 0.78rem;
+      color: var(--accent-coral);
+      font-weight: 700;
+      margin-top: 4px;
+    }
+
+    .btn-reserve-wa {
+      background: var(--accent-wa);
+      color: #064E3B;
+      font-weight: 800;
+      font-size: 0.92rem;
+      padding: 12px 16px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      transition: background 0.2s;
+    }
+
+    .btn-reserve-wa:hover {
+      background: var(--accent-wa-hover);
+    }
+
+    /* SECCIÓN QUÉ INCLUYE */
+    .incluye-section {
+      padding: 45px 0;
+      background: #FFFFFF;
+      border-top: 1px solid var(--border-soft);
+      border-bottom: 1px solid var(--border-soft);
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .section-header h3 {
+      font-size: 1.7rem;
+      font-weight: 900;
+      color: var(--text-main);
+      margin-bottom: 6px;
+    }
+
+    .section-header p {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .incluye-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 16px;
+    }
+
+    .incluye-item {
+      background: var(--bg-main);
+      border: 1px solid var(--border-soft);
+      padding: 18px;
+      border-radius: var(--radius-md);
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+    }
+
+    .incluye-icon {
+      font-size: 1.6rem;
+      background: #FFFFFF;
+      width: 44px;
+      height: 44px;
+      border-radius: 12px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #BAE6FD;
+      flex-shrink: 0;
+    }
+
+    .incluye-text h4 {
+      font-size: 0.96rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 4px;
+    }
+
+    .incluye-text p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    /* CAJA DE TRANSPARENCIA (TARJETA TURISMO) */
+    .transparency-box {
+      margin-top: 24px;
+      background: #FFFBEB;
+      border: 1.5px solid #FDE68A;
+      border-radius: var(--radius-md);
+      padding: 16px 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      font-size: 0.88rem;
+      color: #92400E;
+    }
+
+    /* SECCIÓN PLAN DE CUOTAS CON FONDO FOTOGRÁFICO DE PLAYA */
+    .cuotas-section {
+      padding: 45px 0;
+    }
+
+    .cuotas-card {
+      position: relative;
+      background: linear-gradient(135deg, rgba(3, 105, 161, 0.92), rgba(2, 132, 199, 0.88)),
+                  url('assets/imgs/playa-bg.jpeg') center center / cover no-repeat;
+      color: white;
+      border-radius: var(--radius-lg);
+      padding: 40px 24px;
+      text-align: center;
+      box-shadow: var(--shadow-lg);
+      overflow: hidden;
+    }
+
+    .cuotas-card h3 {
+      font-size: 1.85rem;
+      font-weight: 900;
+      margin-bottom: 10px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+
+    .cuotas-card p {
+      font-size: 1.05rem;
+      color: #E0F2FE;
+      max-width: 620px;
+      margin: 0 auto 26px;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .cuotas-steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 16px;
+      margin-bottom: 28px;
+    }
+
+    .cuota-step-item {
+      background: rgba(255, 255, 255, 0.16);
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      border-radius: var(--radius-md);
+      padding: 18px;
+    }
+
+    .cuota-step-item strong {
+      display: block;
+      font-size: 1.35rem;
+      font-weight: 900;
+      color: #FEF08A;
+      margin-bottom: 4px;
+      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+    }
+
+    .cuota-step-item span {
+      font-size: 0.85rem;
+      color: #FFFFFF;
+      font-weight: 600;
+    }
+
+    .btn-cuotas-wa {
+      background: #FFFFFF;
+      color: var(--primary-dark);
+      font-weight: 800;
+      font-size: 1rem;
+      padding: 15px 30px;
+      border-radius: 12px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+      transition: all 0.2s ease;
+    }
+
+    .btn-cuotas-wa:hover {
+      background: #F8FAFC;
+      transform: translateY(-2px);
+    }
+
+    /* FAQ ACCORDION */
+    .faq-section {
+      padding: 40px 0;
+    }
+
+    .faq-list {
+      max-width: 750px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .faq-item {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+    }
+
+    .faq-question {
+      padding: 16px 20px;
+      font-weight: 700;
+      font-size: 0.96rem;
+      color: var(--text-main);
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      user-select: none;
+    }
+
+    .faq-answer {
+      padding: 0 20px 16px;
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      display: none;
+      border-top: 1px solid var(--border-soft);
+      padding-top: 12px;
+    }
+
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+
+    .faq-item.active .faq-question span {
+      transform: rotate(180deg);
+    }
+
+    /* ASESOR PROFILE */
+    .asesor-box {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-lg);
+      padding: 26px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      gap: 14px;
+      margin-top: 40px;
+      box-shadow: var(--shadow-sm);
+    }
+
+    .asesor-avatar {
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--secondary), var(--primary));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.9rem;
+      color: white;
+      box-shadow: 0 6px 16px rgba(13, 148, 136, 0.25);
+    }
+
+    .asesor-info h4 {
+      font-size: 1.2rem;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+
+    .asesor-info p {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+    }
+
+    /* FOOTER */
+    footer {
+      background: #0F172A;
+      color: #94A3B8;
+      padding: 36px 0 80px;
+      font-size: 0.80rem;
+      text-align: center;
+    }
+
+    footer p {
+      margin-bottom: 8px;
+    }
+
+    footer strong {
+      color: #E2E8F0;
+    }
+
+    /* BOTÓN FLOTANTE WHATSAPP (MÓVIL) */
+    .float-wa {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      background: var(--accent-wa);
+      color: #FFFFFF;
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+      z-index: 999;
+      transition: transform 0.2s;
+    }
+
+    .float-wa:hover {
+      transform: scale(1.08);
+    }
+
+    .float-wa svg {
+      width: 32px;
+      height: 32px;
+      fill: #FFFFFF;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="container nav-inner">
+      <div class="brand">
+        <div class="brand-logo-badge">V</div>
+        <div class="brand-text">
+          <h1>Viajá</h1>
+          <p>Agencia & Asesoría de Viajes</p>
+        </div>
+      </div>
+      <a href="https://wa.me/573013588413?text=%C2%A1Hola%20Viaj%C3%A1!%20Quiero%20m%C3%A1s%20informaci%C3%B3n%20sobre%20la%20promo%20de%20San%20Andr%C3%A9s." 
+         class="btn-nav-wa" target="_blank" rel="noopener">
+        <span>💬 Hablar por WhatsApp</span>
+      </a>
+    </div>
+
+    <!-- QUICK NAV PILLS -->
+    <div class="quick-nav">
+      <a href="#cotizador" class="quick-pill">✨ Cotizador</a>
+      <a href="#hoteles" class="quick-pill">🏨 Ver Hoteles</a>
+      <a href="#incluye" class="quick-pill">✈️ Qué Incluye</a>
+      <a href="#cuotas" class="quick-pill">💳 Plan Cuotas</a>
+      <a href="#faq" class="quick-pill">❓ Preguntas</a>
+    </div>
+  </header>
+
+  <!-- HERO SECTION CON FONDO FOTOGRÁFICO REAL -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-badge">
+        <span>✈️ CUPOS BLOQUEADOS CON AVIANCA</span>
+      </div>
+      <h2>
+        Escápate al Mar de los 7 Colores<br>
+        <span class="highlight-gold">Puente de Noviembre (1 al 4)</span>
+      </h2>
+      <p class="lead">
+        3 noches y 4 días en San Andrés. Vuelos Avianca con maleta de 23 kg incluida, hotel, tours y asistencia médica. ¡Sin sorpresas y con plan de pagos a tu medida!
+      </p>
+
+      <div class="hero-chips">
+        <div class="chip">🧳 <strong>Maleta 23 kg en bodega</strong> incluida</div>
+        <div class="chip">🚤 <strong>Tours Acuario + Haynes Cay</strong> incluidos</div>
+        <div class="chip">💳 Separa con solo <strong>$200.000 / persona</strong></div>
+        <div class="chip">🛡️ <strong>RNT 95174</strong> Asesoría Garantizada</div>
+      </div>
+
+      <div class="hero-cta-box">
+        <a href="#cotizador" class="btn-hero-primary">
+          <span>✨ Arma tu Plan y Cotiza en 1 Minuto ↓</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- COTIZADOR INTERACTIVO -->
+  <section id="cotizador" class="cotizador-section">
+    <div class="container">
+      <div class="cotizador-card">
+        
+        <div class="cotizador-header">
+          <h3>Calcula tu Viaje a Medida</h3>
+          <p>Selecciona con quién viajas y el tipo de alimentación para ver las mejores opciones con precio exacto.</p>
+        </div>
+
+        <!-- PASO 1: ACOMODACIÓN -->
+        <div class="step-group">
+          <span class="step-title">1. ¿Con quién viajas? (Acomodación)</span>
+          <div class="options-grid" id="acomodacion-grid">
+            <div class="opt-btn active" data-type="doble">
+              <span>👥 En Pareja</span>
+              <small>Habitación Doble</small>
+            </div>
+            <div class="opt-btn" data-type="multiple">
+              <span>👨‍👩‍👧‍👦 Amigos / Familia</span>
+              <small>Habitación Múltiple</small>
+            </div>
+            <div class="opt-btn" data-type="ninos">
+              <span>🧒 Con Niños</span>
+              <small>Tarifa 2 a 11 años</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- PASO 2: TIPO DE PLAN -->
+        <div class="step-group">
+          <span class="step-title">2. ¿Qué estilo de alimentación prefieres?</span>
+          <div class="options-grid" id="plan-grid">
+            <div class="opt-btn active" data-plan="ALL">
+              <span>✨ Todos los Planes</span>
+              <small>Ver catálogo completo</small>
+            </div>
+            <div class="opt-btn" data-plan="PAE">
+              <span>🍹 Todo Incluido</span>
+              <small>Comidas, snacks y bar</small>
+            </div>
+            <div class="opt-btn" data-plan="PAM">
+              <span>🌅 Desayuno + Cena</span>
+              <small>Ahorra y disfruta la playa</small>
+            </div>
+            <div class="opt-btn" data-plan="PC">
+              <span>☕ Solo Desayuno</span>
+              <small>Libertad para explorar</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- RESULTADOS FILTRADOS -->
+        <div class="results-wrap" id="hoteles">
+          <h4 class="results-title">
+            <span>🏨 Hoteles Disponibles</span>
+          </h4>
+          <p class="results-subtitle" id="subtitle-filtro">Mostrando opciones para Pareja (Habitación Doble):</p>
+
+          <div class="hotels-grid" id="hotels-container">
+            <!-- Renderizado dinámico vía JavaScript -->
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- QUÉ INCLUYE -->
+  <section id="incluye" class="incluye-section">
+    <div class="container">
+      <div class="section-header">
+        <h3>Todo lo que Incluye tu Paquete</h3>
+        <p>Viaja con tranquilidad. Diseñado para que no tengas que preocuparte por nada.</p>
+      </div>
+
+      <div class="incluye-grid">
+        <div class="incluye-item">
+          <div class="incluye-icon">✈️</div>
+          <div class="incluye-text">
+            <h4>Vuelos Vía Avianca</h4>
+            <p>Ida y regreso con cupos ya bloqueados. No estás a la suerte de tarifas que suben.</p>
+          </div>
+        </div>
+
+        <div class="incluye-item">
+          <div class="incluye-icon">🧳</div>
+          <div class="incluye-text">
+            <h4>Equipaje de Bodega (23 kg)</h4>
+            <p>Incluye maleta de bodega de 23 kg por persona + equipaje de mano sin sobrecostos.</p>
+          </div>
+        </div>
+
+        <div class="incluye-item">
+          <div class="incluye-icon">🚐</div>
+          <div class="incluye-text">
+            <h4>Traslados Aeropuerto</h4>
+            <p>Te recogemos a tu llegada al aeropuerto y te llevamos de regreso para tu vuelo.</p>
+          </div>
+        </div>
+
+        <div class="incluye-item">
+          <div class="incluye-icon">🏨</div>
+          <div class="incluye-text">
+            <h4>Alojamiento 4 Días / 3 Noches</h4>
+            <p>En el hotel que tú elijas, con la acomodación y comodidad seleccionada.</p>
+          </div>
+        </div>
+
+        <div class="incluye-item">
+          <div class="incluye-icon">🍽️</div>
+          <div class="incluye-text">
+            <h4>Alimentación según Plan</h4>
+            <p>Desde solo desayunos (PC) hasta Todo Incluido con bar abierto y snacks (PAE).</p>
+          </div>
+        </div>
+
+        <div class="incluye-item">
+          <div class="incluye-icon">🚤</div>
+          <div class="incluye-text">
+            <h4>Paseos en la Isla Incluidos</h4>
+            <p>Tour al Acuario, Haynes Cay y Vuelta a la Isla (Portofino incluye tour bahía).</p>
+          </div>
+        </div>
+
+        <div class="incluye-item">
+          <div class="incluye-icon">🩺</div>
+          <div class="incluye-text">
+            <h4>Asistencia Médica</h4>
+            <p>Tarjeta Colasistencia médica e impuestos locales cubiertos durante tu estadía.</p>
+          </div>
+        </div>
+
+        <div class="incluye-item">
+          <div class="incluye-icon">👩‍💼</div>
+          <div class="incluye-text">
+            <h4>Asesoría Personalizada Viajá</h4>
+            <p>Te acompañamos por WhatsApp antes, durante y después de tu viaje.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- TRANSPARENCIA -->
+      <div class="transparency-box">
+        <span style="font-size: 1.5rem;">💡</span>
+        <div>
+          <strong>Transparencia total Viajá:</strong> No incluye Tarjeta de Turismo de entrada a la isla (aprox. $153.000 fijada por la Gobernación Departamental) ni gastos personales no descritos. ¡Cero letras pequeñas ocultas!
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLAN DE PAGOS Y CUOTAS CON FONDO FOTOGRÁFICO DE PLAYA -->
+  <section id="cuotas" class="cuotas-section">
+    <div class="container">
+      <div class="cuotas-card">
+        <h3>Separa Fácil y Paga a tu Ritmo</h3>
+        <p>No tienes que desembolsar todo el valor de inmediato. Asegura tus sillas de avión hoy mismo y organiza tu presupuesto.</p>
+
+        <div class="cuotas-steps">
+          <div class="cuota-step-item">
+            <strong>$200.000</strong>
+            <span>1. Separas tu cupo de vuelo y habitación hoy</span>
+          </div>
+          <div class="cuota-step-item">
+            <strong>Cuotas Cómodas</strong>
+            <span>2. Abonas mes a mes o quincenal según tus ingresos</span>
+          </div>
+          <div class="cuota-step-item">
+            <strong>Octubre 2026</strong>
+            <span>3. Terminas de pagar antes de viajar y listo para volar</span>
+          </div>
+        </div>
+
+        <a href="https://wa.me/573013588413?text=%C2%A1Hola%20Viaj%C3%A1!%20Me%20interesa%20conocer%20el%20plan%20de%20pagos%20a%20cuotas%20para%20San%20Andr%C3%A9s." 
+           class="btn-cuotas-wa" target="_blank" rel="noopener">
+          <span>📲 Solicitar Plan de Pagos Personalizado</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- PREGUNTAS FRECUENTES -->
+  <section id="faq" class="faq-section">
+    <div class="container">
+      <div class="section-header">
+        <h3>Preguntas Frecuentes</h3>
+        <p>Resolvemos tus dudas al instante.</p>
+      </div>
+
+      <div class="faq-list">
+        <div class="faq-item">
+          <div class="faq-question">
+            ¿Cómo aseguro mi reserva con Viajá?
+            <span>▼</span>
+          </div>
+          <div class="faq-answer">
+            Solo nos escribes por WhatsApp, verificamos la disponibilidad del hotel que elegiste y separas con el anticipo de $200.000 por persona. Te emitimos tu comprobante de reserva de inmediato.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            ¿Qué diferencia hay entre PC, PAM y PAE?
+            <span>▼</span>
+          </div>
+          <div class="faq-answer">
+            <strong>PC:</strong> Solo desayuno. Ideal si te gusta salir a comer a restaurantes o pasar el día fuera.<br>
+            <strong>PAM:</strong> Desayuno y cena. Te ahorras una comida importante en la noche.<br>
+            <strong>PAE (Todo Incluido):</strong> Desayuno, almuerzo, cena, snacks y bar abierto con bebidas en horarios del hotel. ¡Para no gastar nada extra!
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            ¿Qué tarifa pagan los niños?
+            <span>▼</span>
+          </div>
+          <div class="faq-answer">
+            Los niños entre 2 y 11 años disfrutan de tarifa preferencial en la mayoría de hoteles (en Hotel Blue Island aplica hasta los 9 años). Los bebés menores de 2 años pagan únicamente seguro de $30.000.
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <div class="faq-question">
+            ¿Cuáles son los medios de pago aceptados?
+            <span>▼</span>
+          </div>
+          <div class="faq-answer">
+            Aceptamos transferencias bancarias (Bancolombia, Nequi, Daviplata) y abonos programados para tu comodidad.
+          </div>
+        </div>
+      </div>
+
+      <!-- TARJETA ASESORA -->
+      <div class="asesor-box">
+        <div class="asesor-avatar">🌴</div>
+        <div class="asesor-info">
+          <h4>Asesoría Directa con Viajá</h4>
+          <p>Atención personalizada al WhatsApp <strong>+57 301 358 8413</strong></p>
+          <p style="font-size: 0.78rem; color: var(--text-light); margin-top: 4px;">Registro Nacional de Turismo RNT. 95174</p>
+        </div>
+        <a href="https://wa.me/573013588413?text=%C2%A1Hola!%20Quiero%20asesorarme%20para%20viajar%20a%20San%20Andr%C3%A9s%20con%20Viaj%C3%A1." 
+           class="btn-nav-wa" target="_blank" rel="noopener">
+          <span>Escribirme directamente</span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container">
+      <p><strong>Viajá — Experiencias & Destinos</strong></p>
+      <p>RNT. 95174 rechaza la explotación, la pornografía y el turismo sexual con niños, niñas y adolescentes (Ley 679 de 2001).</p>
+      <p>Tarifas promocionales sujetas a disponibilidad de cupos aéreos Avianca al momento de reservar.</p>
+    </div>
+  </footer>
+
+  <!-- BOTÓN FLOTANTE WHATSAPP -->
+  <a href="https://wa.me/573013588413?text=%C2%A1Hola%20Viaj%C3%A1!%20Estoy%20viendo%20la%20p%C3%A1gina%20de%20San%20Andr%C3%A9s%20y%20quiero%20cotizar." 
+     class="float-wa" target="_blank" rel="noopener" title="Escríbenos por WhatsApp">
+    <svg viewBox="0 0 24 24">
+      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.007c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86.173.086.275.072.376-.044.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.203c.043.072.043.42-.101.825z"/>
+    </svg>
+  </a>
+
+  <!-- LÓGICA INTERACTIVA DEL COTIZADOR -->
+  <script>
+    // BASE DE DATOS DE HOTELES DEL AFICHE
+    const hoteles = [
+      {
+        nombre: "Belavir",
+        plan: "PC",
+        planNombre: "Solo Desayuno (PC)",
+        destacado: "Opción Más Económica",
+        esHighlight: false,
+        precios: { doble: 1199000, multiple: 1169000, ninos: 1169000 },
+        features: ["Desayuno diario incluido", "Vuelos Avianca + Maleta 23kg", "Tours Acuario y Haynes Cay"]
+      },
+      {
+        nombre: "Blue Island Hotel",
+        plan: "PC",
+        planNombre: "Solo Desayuno (PC)",
+        destacado: "Céntrico y Cómodo",
+        esHighlight: false,
+        precios: { doble: 1229000, multiple: 1179000, ninos: 1179000 },
+        features: ["Desayuno incluido", "Excelente ubicación comercial", "Niños tarifa hasta 9 años"]
+      },
+      {
+        nombre: "Isla Bonita (Hab. Estándar)",
+        plan: "PC",
+        planNombre: "Solo Desayuno (PC)",
+        destacado: "Ambiente Isleño",
+        esHighlight: false,
+        precios: { doble: 1319000, multiple: 1319000, ninos: 1259000 },
+        features: ["Desayunos típicos", "Ambiente tranquilo y caribeño", "Vuelos directos Avianca"]
+      },
+      {
+        nombre: "El Vecino",
+        plan: "PAM",
+        planNombre: "Desayuno + Cena (PAM)",
+        destacado: "Mejor Relación Calidad-Precio",
+        esHighlight: true,
+        precios: { doble: 1339000, multiple: 1299000, ninos: 1299000 },
+        features: ["Desayuno y Cena incluidos", "Te ahorras comer de noche en la isla", "Vuelos + Maleta 23kg + Tours"]
+      },
+      {
+        nombre: "Ocean Blue Beach",
+        plan: "PAM",
+        planNombre: "Desayuno + Cena (PAM)",
+        destacado: "Cerca a la Playa",
+        esHighlight: false,
+        precios: { doble: 1339000, multiple: 1269000, ninos: 1269000 },
+        features: ["Desayuno y Cena diaria", "Cercanía a la brisa marina", "Asistencia médica e impuestos"]
+      },
+      {
+        nombre: "Koray (Hab. Estándar)",
+        plan: "PC",
+        planNombre: "Solo Desayuno (PC)",
+        destacado: "Estilo Relajado",
+        esHighlight: false,
+        precios: { doble: 1419000, multiple: 1419000, ninos: 1269000 },
+        features: ["Desayunos tipo buffet", "Habitación estándar confortable", "Tours al Acuario y Haynes Cay"]
+      },
+      {
+        nombre: "Portofino Caribe",
+        plan: "PA",
+        planNombre: "Desayuno, Almuerzo y Cena (PA)",
+        destacado: "3 Comidas + Tour Bahía",
+        esHighlight: false,
+        precios: { doble: 1749000, multiple: 1749000, ninos: 1649000 },
+        features: ["3 comidas diarias incluidas", "Tour Acuario Mágico + Vuelta + Tour Bahía", "Ubicación peatonal privilegiada"]
+      },
+      {
+        nombre: "Verdemar",
+        plan: "PAM",
+        planNombre: "Desayuno + Cena (PAM)",
+        destacado: "Zona Rosa y Playas",
+        esHighlight: false,
+        precios: { doble: 1759000, multiple: 1689000, ninos: 1569000 },
+        features: ["Desayuno y Cena incluidos", "A pasos de la playa principal", "Excelente servicio al huésped"]
+      },
+      {
+        nombre: "GHL Sunrise V.I",
+        plan: "PC",
+        planNombre: "Solo Desayuno (PC)",
+        destacado: "Resort con Piscina Marina",
+        esHighlight: false,
+        precios: { doble: 1829000, multiple: 1699000, ninos: 1349000 },
+        features: ["Piscina de agua de mar icónica", "Desayuno buffet premium", "Instalaciones de primer nivel"]
+      },
+      {
+        nombre: "Tiuna",
+        plan: "PAE",
+        planNombre: "Todo Incluido con Bar Abierto (PAE)",
+        destacado: "Favorito: Cero Preocupaciones",
+        esHighlight: true,
+        precios: { doble: 1839000, multiple: 1839000, ninos: 1599000 },
+        features: ["Desayuno, almuerzo y cena", "Bar abierto y bebidas libres", "Snacks en horarios del hotel"]
+      }
+    ];
+
+    let estado = {
+      acomodacion: "doble",
+      planFiltro: "ALL"
+    };
+
+    function formatPesos(num) {
+      return "$" + num.toLocaleString("es-CO");
+    }
+
+    function renderHoteles() {
+      const container = document.getElementById("hotels-container");
+      const subLabel = document.getElementById("subtitle-filtro");
+
+      let acomTexto = "En Pareja (Habitación Doble)";
+      if (estado.acomodacion === "multiple") acomTexto = "En Grupo (Habitación Múltiple)";
+      if (estado.acomodacion === "ninos") acomTexto = "Tarifa Especial para Niños (2 a 11 años)";
+
+      subLabel.textContent = `Mostrando tarifas por persona para: ${acomTexto}`;
+
+      const filtrados = hoteles.filter(h => {
+        if (estado.planFiltro === "ALL") return true;
+        if (estado.planFiltro === "PAE") return h.plan === "PAE" || h.plan === "PA";
+        return h.plan === estado.planFiltro;
+      });
+
+      // Ordenar: primero los destacados, luego por precio ascendente
+      filtrados.sort((a, b) => {
+        if (a.esHighlight && !b.esHighlight) return -1;
+        if (!a.esHighlight && b.esHighlight) return 1;
+        return a.precios[estado.acomodacion] - b.precios[estado.acomodacion];
+      });
+
+      container.innerHTML = "";
+
+      filtrados.forEach(hotel => {
+        const precio = hotel.precios[estado.acomodacion];
+        const card = document.createElement("div");
+        card.className = "hotel-card";
+
+        const waMsg = encodeURIComponent(
+          `¡Hola Viajá! Estuve viendo la promo de San Andrés (Nov 1 al 4) y me gustó el Hotel ${hotel.nombre} (${hotel.planNombre}) para viajar ${acomTexto}. El valor es de ${formatPesos(precio)} por persona. ¿Tienen cupos disponibles con Avianca?`
+        );
+        const waUrl = `https://wa.me/573013588413?text=${waMsg}`;
+
+        card.innerHTML = `
+          <div>
+            ${hotel.destacado ? `<div class="hotel-badge-top ${hotel.esHighlight ? 'highlight' : ''}">${hotel.destacado}</div>` : ''}
+            <span class="hotel-plan-tag">${hotel.planNombre}</span>
+            <h4 class="hotel-name">${hotel.nombre}</h4>
+            <ul class="hotel-features">
+              ${hotel.features.map(f => `<li>${f}</li>`).join('')}
+            </ul>
+          </div>
+          <div>
+            <div class="hotel-price-box">
+              <div class="hotel-price-label">Valor por persona</div>
+              <div class="hotel-price-amount">${formatPesos(precio)}</div>
+              <div class="hotel-installments">💳 Separas hoy con solo $200.000</div>
+            </div>
+            <a href="${waUrl}" class="btn-reserve-wa" target="_blank" rel="noopener">
+              <span>💬 Consultar Hotel en WhatsApp</span>
+            </a>
+          </div>
+        `;
+
+        container.appendChild(card);
+      });
+    }
+
+    // EVENT LISTENERS DE FILTROS
+    document.querySelectorAll("#acomodacion-grid .opt-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll("#acomodacion-grid .opt-btn").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        estado.acomodacion = btn.dataset.type;
+        renderHoteles();
+      });
+    });
+
+    document.querySelectorAll("#plan-grid .opt-btn").forEach(btn => {
+      btn.addEventListener("click", () => {
+        document.querySelectorAll("#plan-grid .opt-btn").forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
+        estado.planFiltro = btn.dataset.plan;
+        renderHoteles();
+      });
+    });
+
+    // ACORDEÓN DE PREGUNTAS FRECUENTES
+    document.querySelectorAll(".faq-question").forEach(q => {
+      q.addEventListener("click", () => {
+        const item = q.parentElement;
+        item.classList.toggle("active");
+      });
+    });
+
+    // INICIALIZACIÓN
+    renderHoteles();
+  </script>
+</body>
+</html>
