@@ -14,7 +14,7 @@
   <meta property="og:site_name" content="Viajá">
   <meta property="og:title" content="🌴 ¿Nos vamos de Puente a San Andrés? | Viajá">
   <meta property="og:description" content="Noviembre 1 al 4. Vuelos directos Avianca con maleta de 23kg + Hotel + Tours. Separa tu cupo con $200.000 y paga a cuotas. ¡Cotiza tu hotel favorito aquí!">
-  <meta property="og:image" content="https://tommygit2021.github.io/sanandres-noviembre/assets/imgs/hero-bg.jpeg">
+  <meta property="og:image" content="https://tommygit2021.github.io/sanandres-noviembre/assets/imgs/img-san andres-2.jpeg">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta property="og:url" content="https://tommygit2021.github.io/sanandres-noviembre/">
@@ -33,16 +33,16 @@
       --accent-coral-hover: #EA580C;
       --accent-wa: #25D366;        /* Verde WhatsApp */
       --accent-wa-hover: #1EBE5B;
-      --bg-main: #F8FAFC;          /* Fondo Claro y Fresco */
+      --bg-main: #F8FAFC;
       --bg-surface: #FFFFFF;
       --bg-subtle: #F1F5F9;
-      --text-main: #0F172A;        /* Grafito Oscuro */
+      --text-main: #0F172A;
       --text-muted: #475569;
       --text-light: #64748B;
       --border-soft: #E2E8F0;
-      --shadow-sm: 0 4px 12px rgba(2, 132, 199, 0.05);
-      --shadow-md: 0 10px 25px rgba(2, 132, 199, 0.08);
-      --shadow-lg: 0 18px 40px rgba(15, 23, 42, 0.16);
+      --shadow-sm: 0 4px 14px rgba(2, 132, 199, 0.08);
+      --shadow-md: 0 12px 28px rgba(15, 23, 42, 0.12);
+      --shadow-lg: 0 20px 45px rgba(15, 23, 42, 0.22);
       --radius-sm: 10px;
       --radius-md: 16px;
       --radius-lg: 24px;
@@ -59,12 +59,26 @@
       scroll-behavior: smooth;
     }
 
+    /* FONDO ENVOLVENTE REAL DE SAN ANDRÉS EN TODA LA PÁGINA */
     body {
       font-family: var(--font);
-      background-color: var(--bg-main);
       color: var(--text-main);
       line-height: 1.6;
       -webkit-font-smoothing: antialiased;
+      background: url('assets/imgs/img-san andres-2.jpeg') center center / cover no-repeat fixed;
+      position: relative;
+      min-height: 100vh;
+    }
+
+    /* Velo de luminosidad para garantizar lectura sin perder el mar de fondo */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(248, 250, 252, 0.88);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+      z-index: -1;
     }
 
     a {
@@ -74,19 +88,21 @@
 
     .container {
       width: 100%;
-      max-width: 1100px;
+      max-width: 1120px;
       margin: 0 auto;
       padding: 0 20px;
     }
 
     /* BARRA SUPERIOR STICKY */
     header {
-      background: rgba(255, 255, 255, 0.96);
-      backdrop-filter: blur(12px);
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
       border-bottom: 1px solid var(--border-soft);
       position: sticky;
       top: 0;
       z-index: 100;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
     }
 
     .nav-inner {
@@ -106,19 +122,19 @@
     .brand-logo-badge {
       background: linear-gradient(135deg, var(--primary), var(--secondary));
       color: white;
-      width: 40px;
-      height: 40px;
+      width: 42px;
+      height: 42px;
       border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
       font-weight: 900;
-      font-size: 1.3rem;
-      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.3);
+      font-size: 1.35rem;
+      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.35);
     }
 
     .brand-text h1 {
-      font-size: 1.35rem;
+      font-size: 1.38rem;
       font-weight: 900;
       letter-spacing: -0.5px;
       color: var(--primary-dark);
@@ -136,14 +152,14 @@
     .btn-nav-wa {
       background: var(--accent-wa);
       color: #064E3B;
-      font-weight: 700;
+      font-weight: 800;
       font-size: 0.88rem;
       padding: 9px 18px;
       border-radius: 30px;
       display: flex;
       align-items: center;
       gap: 8px;
-      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.3);
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.35);
       transition: all 0.2s ease;
       white-space: nowrap;
     }
@@ -155,7 +171,8 @@
 
     /* SUB-BARRA DE NAVEGACIÓN RÁPIDA MÓVIL */
     .quick-nav {
-      background: #F0F9FF;
+      background: rgba(224, 242, 254, 0.85);
+      backdrop-filter: blur(8px);
       border-bottom: 1px solid #BAE6FD;
       overflow-x: auto;
       white-space: nowrap;
@@ -177,57 +194,60 @@
       display: inline-flex;
       align-items: center;
       gap: 5px;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
     }
 
-    /* HERO SECTION CON FONDO FOTOGRÁFICO DE SAN ANDRÉS */
+    /* HERO SECTION CON FOTO CLARA Y VIBRANTE DEL MAR DE SAN ANDRÉS */
     .hero {
       position: relative;
-      background: linear-gradient(180deg, rgba(15, 23, 42, 0.65) 0%, rgba(3, 105, 161, 0.82) 55%, rgba(2, 132, 199, 0.94) 100%),
-                  url('assets/imgs/hero-bg.jpeg') center center / cover no-repeat;
-      padding: 60px 0 50px;
+      background: linear-gradient(180deg, rgba(15, 23, 42, 0.45) 0%, rgba(3, 105, 161, 0.65) 60%, rgba(2, 132, 199, 0.88) 100%),
+                  url('assets/imgs/img-san andres-1.jpeg') center center / cover no-repeat;
+      padding: 70px 0 60px;
       text-align: center;
       color: #FFFFFF;
       overflow: hidden;
+      border-bottom: 3px solid rgba(255, 255, 255, 0.3);
     }
 
     .hero-badge {
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      background: rgba(255, 255, 255, 0.2);
-      backdrop-filter: blur(8px);
-      border: 1px solid rgba(255, 255, 255, 0.4);
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(10px);
+      border: 1.5px solid rgba(255, 255, 255, 0.6);
       color: #FFFFFF;
-      padding: 7px 16px;
+      padding: 8px 18px;
       border-radius: 30px;
-      font-size: 0.82rem;
+      font-size: 0.84rem;
       font-weight: 800;
-      margin-bottom: 18px;
+      margin-bottom: 20px;
       letter-spacing: 0.5px;
-      box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
     }
 
     .hero h2 {
-      font-size: 2.45rem;
+      font-size: 2.6rem;
       font-weight: 900;
       line-height: 1.15;
       letter-spacing: -0.8px;
       color: #FFFFFF;
       margin-bottom: 16px;
-      text-shadow: 0 3px 12px rgba(0, 0, 0, 0.35);
+      text-shadow: 0 3px 15px rgba(0, 0, 0, 0.5);
     }
 
     .hero h2 span.highlight-gold {
       color: #FDE047;
-      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
     }
 
     .hero p.lead {
-      font-size: 1.15rem;
+      font-size: 1.18rem;
       color: #F0F9FF;
-      max-width: 680px;
-      margin: 0 auto 26px;
-      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+      max-width: 700px;
+      margin: 0 auto 28px;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+      font-weight: 500;
     }
 
     .hero-chips {
@@ -235,22 +255,22 @@
       flex-wrap: wrap;
       justify-content: center;
       gap: 10px;
-      margin-bottom: 30px;
+      margin-bottom: 32px;
     }
 
     .chip {
-      background: rgba(255, 255, 255, 0.92);
-      backdrop-filter: blur(6px);
-      border: 1px solid rgba(255, 255, 255, 0.6);
-      padding: 7px 15px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
+      border: 1px solid rgba(255, 255, 255, 0.8);
+      padding: 8px 16px;
       border-radius: 20px;
-      font-size: 0.82rem;
+      font-size: 0.84rem;
       font-weight: 700;
       color: var(--text-main);
       display: inline-flex;
       align-items: center;
       gap: 6px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
     }
 
     .chip strong {
@@ -269,45 +289,46 @@
       background: linear-gradient(135deg, var(--accent-coral), var(--accent-coral-hover));
       color: white;
       font-weight: 800;
-      font-size: 1.08rem;
-      padding: 16px 32px;
-      border-radius: 14px;
+      font-size: 1.1rem;
+      padding: 17px 34px;
+      border-radius: 16px;
       display: inline-flex;
       align-items: center;
       gap: 10px;
-      box-shadow: 0 10px 28px rgba(249, 115, 22, 0.45);
+      box-shadow: 0 10px 30px rgba(249, 115, 22, 0.5);
       transition: all 0.2s ease;
       width: 100%;
-      max-width: 390px;
+      max-width: 400px;
       justify-content: center;
     }
 
     .btn-hero-primary:hover {
       transform: translateY(-2px);
-      box-shadow: 0 14px 34px rgba(249, 115, 22, 0.55);
+      box-shadow: 0 15px 36px rgba(249, 115, 22, 0.6);
     }
 
     /* SECCIÓN COTIZADOR INTERACTIVO */
     .cotizador-section {
-      padding: 30px 0 50px;
+      padding: 40px 0 60px;
     }
 
     .cotizador-card {
-      background: var(--bg-surface);
-      border: 1.5px solid #BAE6FD;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(12px);
+      border: 2px solid #BAE6FD;
       border-radius: var(--radius-lg);
-      padding: 30px 20px;
+      padding: 32px 24px;
       box-shadow: var(--shadow-md);
       position: relative;
     }
 
     .cotizador-header {
       text-align: center;
-      margin-bottom: 26px;
+      margin-bottom: 28px;
     }
 
     .cotizador-header h3 {
-      font-size: 1.6rem;
+      font-size: 1.7rem;
       font-weight: 900;
       color: var(--primary-dark);
       margin-bottom: 6px;
@@ -315,11 +336,11 @@
 
     .cotizador-header p {
       color: var(--text-muted);
-      font-size: 0.94rem;
+      font-size: 0.95rem;
     }
 
     .step-title {
-      font-size: 0.88rem;
+      font-size: 0.90rem;
       font-weight: 800;
       color: var(--secondary);
       text-transform: uppercase;
@@ -329,24 +350,24 @@
     }
 
     .step-group {
-      margin-bottom: 24px;
+      margin-bottom: 26px;
     }
 
     .options-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(130px, 1fr));
-      gap: 10px;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 12px;
     }
 
     .opt-btn {
-      background: var(--bg-subtle);
-      border: 1.5px solid var(--border-soft);
+      background: #FFFFFF;
+      border: 2px solid var(--border-soft);
       border-radius: var(--radius-md);
-      padding: 13px 10px;
+      padding: 14px 12px;
       text-align: center;
       cursor: pointer;
-      font-weight: 700;
-      font-size: 0.88rem;
+      font-weight: 800;
+      font-size: 0.90rem;
       color: var(--text-main);
       display: flex;
       flex-direction: column;
@@ -355,10 +376,11 @@
       gap: 4px;
       transition: all 0.2s ease;
       user-select: none;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
     }
 
     .opt-btn small {
-      font-size: 0.72rem;
+      font-size: 0.74rem;
       color: var(--text-light);
       font-weight: 500;
     }
@@ -366,30 +388,31 @@
     .opt-btn:hover {
       background: var(--primary-light);
       border-color: #7DD3FC;
+      transform: translateY(-1px);
     }
 
     .opt-btn.active {
       background: var(--primary-light);
       border-color: var(--primary);
       color: var(--primary-dark);
-      box-shadow: 0 4px 12px rgba(2, 132, 199, 0.15);
+      box-shadow: 0 4px 14px rgba(2, 132, 199, 0.2);
     }
 
     .opt-btn.active small {
       color: var(--primary-dark);
-      font-weight: 600;
+      font-weight: 700;
     }
 
-    /* RESULTADOS / HOTELES RECOMENDADOS */
+    /* RESULTADOS / HOTELES CON FOTOGRAFÍAS REALES */
     .results-wrap {
-      margin-top: 30px;
-      border-top: 2px dashed var(--border-soft);
-      padding-top: 24px;
+      margin-top: 32px;
+      border-top: 2px dashed #BAE6FD;
+      padding-top: 26px;
     }
 
     .results-title {
-      font-size: 1.28rem;
-      font-weight: 800;
+      font-size: 1.35rem;
+      font-weight: 900;
       color: var(--text-main);
       margin-bottom: 4px;
       display: flex;
@@ -398,15 +421,15 @@
     }
 
     .results-subtitle {
-      font-size: 0.86rem;
+      font-size: 0.90rem;
       color: var(--text-light);
-      margin-bottom: 20px;
+      margin-bottom: 22px;
     }
 
     .hotels-grid {
       display: grid;
       grid-template-columns: 1fr;
-      gap: 18px;
+      gap: 22px;
     }
 
     @media (min-width: 768px) {
@@ -417,67 +440,100 @@
 
     .hotel-card {
       background: #FFFFFF;
-      border: 1px solid var(--border-soft);
+      border: 1.5px solid var(--border-soft);
       border-radius: var(--radius-md);
-      padding: 20px;
+      overflow: hidden;
       box-shadow: var(--shadow-sm);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+      transition: all 0.25s ease;
       position: relative;
     }
 
     .hotel-card:hover {
-      transform: translateY(-3px);
+      transform: translateY(-4px);
       box-shadow: var(--shadow-md);
-      border-color: #BAE6FD;
+      border-color: #7DD3FC;
+    }
+
+    /* CONTENEDOR DE FOTO DEL HOTEL */
+    .hotel-img-wrap {
+      position: relative;
+      width: 100%;
+      height: 190px;
+      overflow: hidden;
+      background: #E2E8F0;
+    }
+
+    .hotel-thumb {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.4s ease;
+      display: block;
+    }
+
+    .hotel-card:hover .hotel-thumb {
+      transform: scale(1.06);
     }
 
     .hotel-badge-top {
       position: absolute;
-      top: -10px;
-      right: 16px;
+      top: 10px;
+      right: 10px;
       background: var(--secondary);
       color: white;
       font-size: 0.72rem;
       font-weight: 800;
-      padding: 3px 10px;
+      padding: 4px 12px;
       border-radius: 20px;
       letter-spacing: 0.5px;
       text-transform: uppercase;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     }
 
     .hotel-badge-top.highlight {
       background: var(--accent-coral);
     }
 
-    .hotel-plan-tag {
-      font-size: 0.76rem;
+    .hotel-plan-tag-overlay {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      background: rgba(3, 105, 161, 0.92);
+      color: white;
+      font-size: 0.75rem;
       font-weight: 800;
-      color: var(--primary-dark);
-      background: var(--primary-light);
-      padding: 3px 10px;
-      border-radius: 6px;
-      display: inline-block;
-      margin-bottom: 8px;
+      padding: 4px 12px;
+      border-radius: 8px;
+      backdrop-filter: blur(6px);
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .hotel-body {
+      padding: 18px 20px;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+      justify-content: space-between;
     }
 
     .hotel-name {
-      font-size: 1.25rem;
-      font-weight: 800;
+      font-size: 1.3rem;
+      font-weight: 900;
       color: var(--text-main);
       margin-bottom: 8px;
     }
 
     .hotel-features {
       list-style: none;
-      font-size: 0.84rem;
+      font-size: 0.85rem;
       color: var(--text-muted);
-      margin-bottom: 16px;
+      margin-bottom: 18px;
       display: flex;
       flex-direction: column;
-      gap: 4px;
+      gap: 5px;
     }
 
     .hotel-features li::before {
@@ -489,28 +545,29 @@
     .hotel-price-box {
       background: var(--bg-subtle);
       border-radius: 12px;
-      padding: 12px 14px;
+      padding: 12px 16px;
       margin-bottom: 14px;
+      border: 1px solid var(--border-soft);
     }
 
     .hotel-price-label {
       font-size: 0.74rem;
       color: var(--text-light);
       text-transform: uppercase;
-      font-weight: 700;
+      font-weight: 800;
     }
 
     .hotel-price-amount {
-      font-size: 1.6rem;
+      font-size: 1.65rem;
       font-weight: 900;
       color: var(--primary-dark);
       line-height: 1.1;
     }
 
     .hotel-installments {
-      font-size: 0.78rem;
+      font-size: 0.80rem;
       color: var(--accent-coral);
-      font-weight: 700;
+      font-weight: 800;
       margin-top: 4px;
     }
 
@@ -518,35 +575,39 @@
       background: var(--accent-wa);
       color: #064E3B;
       font-weight: 800;
-      font-size: 0.92rem;
-      padding: 12px 16px;
+      font-size: 0.94rem;
+      padding: 13px 18px;
       border-radius: 12px;
       display: flex;
       align-items: center;
       justify-content: center;
       gap: 8px;
-      transition: background 0.2s;
+      transition: background 0.2s, transform 0.2s;
+      box-shadow: 0 4px 12px rgba(37, 211, 102, 0.25);
     }
 
     .btn-reserve-wa:hover {
       background: var(--accent-wa-hover);
+      transform: translateY(-1px);
     }
 
-    /* SECCIÓN QUÉ INCLUYE */
+    /* SECCIÓN QUÉ INCLUYE (CON CARDS VISUALES) */
     .incluye-section {
-      padding: 45px 0;
-      background: #FFFFFF;
+      padding: 50px 0;
+      background: rgba(255, 255, 255, 0.94);
+      backdrop-filter: blur(10px);
       border-top: 1px solid var(--border-soft);
       border-bottom: 1px solid var(--border-soft);
+      margin: 20px 0;
     }
 
     .section-header {
       text-align: center;
-      margin-bottom: 30px;
+      margin-bottom: 34px;
     }
 
     .section-header h3 {
-      font-size: 1.7rem;
+      font-size: 1.85rem;
       font-weight: 900;
       color: var(--text-main);
       margin-bottom: 6px;
@@ -554,137 +615,138 @@
 
     .section-header p {
       color: var(--text-muted);
-      font-size: 0.95rem;
+      font-size: 0.98rem;
     }
 
     .incluye-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 16px;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 18px;
     }
 
     .incluye-item {
-      background: var(--bg-main);
-      border: 1px solid var(--border-soft);
-      padding: 18px;
-      border-radius: var(--radius-md);
-      display: flex;
-      align-items: flex-start;
-      gap: 14px;
-    }
-
-    .incluye-icon {
-      font-size: 1.6rem;
       background: #FFFFFF;
-      width: 44px;
-      height: 44px;
-      border-radius: 12px;
+      border: 1px solid var(--border-soft);
+      border-radius: var(--radius-md);
+      overflow: hidden;
+      box-shadow: var(--shadow-sm);
       display: flex;
-      align-items: center;
-      justify-content: center;
-      border: 1px solid #BAE6FD;
-      flex-shrink: 0;
+      flex-direction: column;
     }
 
-    .incluye-text h4 {
-      font-size: 0.96rem;
+    .incluye-img {
+      width: 100%;
+      height: 120px;
+      object-fit: cover;
+    }
+
+    .incluye-body {
+      padding: 16px;
+    }
+
+    .incluye-body h4 {
+      font-size: 1rem;
       font-weight: 800;
       color: var(--text-main);
       margin-bottom: 4px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
     }
 
-    .incluye-text p {
-      font-size: 0.82rem;
+    .incluye-body p {
+      font-size: 0.84rem;
       color: var(--text-muted);
     }
 
-    /* CAJA DE TRANSPARENCIA (TARJETA TURISMO) */
+    /* CAJA DE TRANSPARENCIA */
     .transparency-box {
-      margin-top: 24px;
+      margin-top: 28px;
       background: #FFFBEB;
       border: 1.5px solid #FDE68A;
       border-radius: var(--radius-md);
-      padding: 16px 20px;
+      padding: 18px 22px;
       display: flex;
       align-items: center;
       gap: 14px;
-      font-size: 0.88rem;
+      font-size: 0.90rem;
       color: #92400E;
     }
 
-    /* SECCIÓN PLAN DE CUOTAS CON FONDO FOTOGRÁFICO DE PLAYA */
+    /* SECCIÓN PLAN DE CUOTAS CON FONDO PANORÁMICO REAL */
     .cuotas-section {
-      padding: 45px 0;
+      padding: 50px 0;
     }
 
     .cuotas-card {
       position: relative;
-      background: linear-gradient(135deg, rgba(3, 105, 161, 0.92), rgba(2, 132, 199, 0.88)),
-                  url('assets/imgs/playa-bg.jpeg') center center / cover no-repeat;
+      background: linear-gradient(135deg, rgba(3, 105, 161, 0.90), rgba(2, 132, 199, 0.85)),
+                  url('assets/imgs/img-san andres-2.jpeg') center center / cover no-repeat;
       color: white;
       border-radius: var(--radius-lg);
-      padding: 40px 24px;
+      padding: 44px 26px;
       text-align: center;
       box-shadow: var(--shadow-lg);
       overflow: hidden;
+      border: 2px solid rgba(255, 255, 255, 0.4);
     }
 
     .cuotas-card h3 {
-      font-size: 1.85rem;
+      font-size: 2rem;
       font-weight: 900;
       margin-bottom: 10px;
-      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
     }
 
     .cuotas-card p {
-      font-size: 1.05rem;
-      color: #E0F2FE;
-      max-width: 620px;
-      margin: 0 auto 26px;
-      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+      font-size: 1.1rem;
+      color: #F0F9FF;
+      max-width: 650px;
+      margin: 0 auto 28px;
+      text-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
     }
 
     .cuotas-steps {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 16px;
-      margin-bottom: 28px;
+      gap: 18px;
+      margin-bottom: 30px;
     }
 
     .cuota-step-item {
-      background: rgba(255, 255, 255, 0.16);
+      background: rgba(255, 255, 255, 0.20);
       backdrop-filter: blur(10px);
-      border: 1px solid rgba(255, 255, 255, 0.3);
+      border: 1px solid rgba(255, 255, 255, 0.35);
       border-radius: var(--radius-md);
-      padding: 18px;
+      padding: 20px;
     }
 
     .cuota-step-item strong {
       display: block;
-      font-size: 1.35rem;
+      font-size: 1.45rem;
       font-weight: 900;
       color: #FEF08A;
       margin-bottom: 4px;
-      text-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
     }
 
     .cuota-step-item span {
-      font-size: 0.85rem;
+      font-size: 0.88rem;
       color: #FFFFFF;
-      font-weight: 600;
+      font-weight: 700;
     }
 
     .btn-cuotas-wa {
       background: #FFFFFF;
       color: var(--primary-dark);
-      font-weight: 800;
-      font-size: 1rem;
-      padding: 15px 30px;
-      border-radius: 12px;
+      font-weight: 900;
+      font-size: 1.05rem;
+      padding: 16px 32px;
+      border-radius: 14px;
       display: inline-flex;
       align-items: center;
-      gap: 8px;
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+      gap: 10px;
+      box-shadow: 0 6px 22px rgba(0, 0, 0, 0.3);
       transition: all 0.2s ease;
     }
 
@@ -695,11 +757,11 @@
 
     /* FAQ ACCORDION */
     .faq-section {
-      padding: 40px 0;
+      padding: 40px 0 60px;
     }
 
     .faq-list {
-      max-width: 750px;
+      max-width: 780px;
       margin: 0 auto;
       display: flex;
       flex-direction: column;
@@ -707,16 +769,18 @@
     }
 
     .faq-item {
-      background: var(--bg-surface);
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(8px);
       border: 1px solid var(--border-soft);
       border-radius: var(--radius-md);
       overflow: hidden;
+      box-shadow: var(--shadow-sm);
     }
 
     .faq-question {
-      padding: 16px 20px;
-      font-weight: 700;
-      font-size: 0.96rem;
+      padding: 18px 22px;
+      font-weight: 800;
+      font-size: 0.98rem;
       color: var(--text-main);
       cursor: pointer;
       display: flex;
@@ -726,12 +790,12 @@
     }
 
     .faq-answer {
-      padding: 0 20px 16px;
-      font-size: 0.88rem;
+      padding: 0 22px 18px;
+      font-size: 0.90rem;
       color: var(--text-muted);
       display: none;
       border-top: 1px solid var(--border-soft);
-      padding-top: 12px;
+      padding-top: 14px;
     }
 
     .faq-item.active .faq-answer {
@@ -744,40 +808,41 @@
 
     /* ASESOR PROFILE */
     .asesor-box {
-      background: var(--bg-surface);
-      border: 1px solid var(--border-soft);
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(10px);
+      border: 1.5px solid #BAE6FD;
       border-radius: var(--radius-lg);
-      padding: 26px;
+      padding: 28px;
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
-      gap: 14px;
+      gap: 16px;
       margin-top: 40px;
-      box-shadow: var(--shadow-sm);
+      box-shadow: var(--shadow-md);
     }
 
     .asesor-avatar {
-      width: 68px;
-      height: 68px;
+      width: 72px;
+      height: 72px;
       border-radius: 50%;
       background: linear-gradient(135deg, var(--secondary), var(--primary));
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.9rem;
+      font-size: 2rem;
       color: white;
-      box-shadow: 0 6px 16px rgba(13, 148, 136, 0.25);
+      box-shadow: 0 6px 18px rgba(13, 148, 136, 0.3);
     }
 
     .asesor-info h4 {
-      font-size: 1.2rem;
-      font-weight: 800;
+      font-size: 1.25rem;
+      font-weight: 900;
       color: var(--text-main);
     }
 
     .asesor-info p {
-      font-size: 0.88rem;
+      font-size: 0.90rem;
       color: var(--text-muted);
     }
 
@@ -785,8 +850,8 @@
     footer {
       background: #0F172A;
       color: #94A3B8;
-      padding: 36px 0 80px;
-      font-size: 0.80rem;
+      padding: 40px 0 90px;
+      font-size: 0.82rem;
       text-align: center;
     }
 
@@ -801,28 +866,28 @@
     /* BOTÓN FLOTANTE WHATSAPP (MÓVIL) */
     .float-wa {
       position: fixed;
-      bottom: 20px;
-      right: 20px;
+      bottom: 24px;
+      right: 24px;
       background: var(--accent-wa);
       color: #FFFFFF;
-      width: 60px;
-      height: 60px;
+      width: 62px;
+      height: 62px;
       border-radius: 50%;
       display: flex;
       align-items: center;
       justify-content: center;
-      box-shadow: 0 6px 20px rgba(37, 211, 102, 0.45);
+      box-shadow: 0 8px 24px rgba(37, 211, 102, 0.5);
       z-index: 999;
       transition: transform 0.2s;
     }
 
     .float-wa:hover {
-      transform: scale(1.08);
+      transform: scale(1.1);
     }
 
     .float-wa svg {
-      width: 32px;
-      height: 32px;
+      width: 34px;
+      height: 34px;
       fill: #FFFFFF;
     }
   </style>
@@ -855,7 +920,7 @@
     </div>
   </header>
 
-  <!-- HERO SECTION CON FONDO FOTOGRÁFICO REAL -->
+  <!-- HERO SECTION CON FOTO CLARA Y VIBRANTE DEL MAR DE SAN ANDRÉS -->
   <section class="hero">
     <div class="container">
       <div class="hero-badge">
@@ -891,7 +956,7 @@
         
         <div class="cotizador-header">
           <h3>Calcula tu Viaje a Medida</h3>
-          <p>Selecciona con quién viajas y el tipo de alimentación para ver las mejores opciones con precio exacto.</p>
+          <p>Selecciona con quién viajas y el tipo de alimentación para ver las mejores opciones con fotos y precio exacto.</p>
         </div>
 
         <!-- PASO 1: ACOMODACIÓN -->
@@ -939,12 +1004,12 @@
         <!-- RESULTADOS FILTRADOS -->
         <div class="results-wrap" id="hoteles">
           <h4 class="results-title">
-            <span>🏨 Hoteles Disponibles</span>
+            <span>🏨 Hoteles Disponibles en San Andrés</span>
           </h4>
-          <p class="results-subtitle" id="subtitle-filtro">Mostrando opciones para Pareja (Habitación Doble):</p>
+          <p class="results-subtitle" id="subtitle-filtro">Mostrando tarifas por persona para Pareja (Habitación Doble):</p>
 
           <div class="hotels-grid" id="hotels-container">
-            <!-- Renderizado dinámico vía JavaScript -->
+            <!-- Renderizado dinámico vía JavaScript con Fotos Reales -->
           </div>
         </div>
 
@@ -952,7 +1017,7 @@
     </div>
   </section>
 
-  <!-- QUÉ INCLUYE -->
+  <!-- QUÉ INCLUYE (CON FOTOGRAFÍAS REALES) -->
   <section id="incluye" class="incluye-section">
     <div class="container">
       <div class="section-header">
@@ -962,81 +1027,49 @@
 
       <div class="incluye-grid">
         <div class="incluye-item">
-          <div class="incluye-icon">✈️</div>
-          <div class="incluye-text">
-            <h4>Vuelos Vía Avianca</h4>
-            <p>Ida y regreso con cupos ya bloqueados. No estás a la suerte de tarifas que suben.</p>
+          <img src="assets/imgs/vuelo-avianca.jpg" alt="Vuelos Avianca" class="incluye-img">
+          <div class="incluye-body">
+            <h4>✈️ Vuelos Vía Avianca</h4>
+            <p>Ida y regreso con cupos ya bloqueados. Tarifa fija garantizada para el puente de noviembre.</p>
           </div>
         </div>
 
         <div class="incluye-item">
-          <div class="incluye-icon">🧳</div>
-          <div class="incluye-text">
-            <h4>Equipaje de Bodega (23 kg)</h4>
-            <p>Incluye maleta de bodega de 23 kg por persona + equipaje de mano sin sobrecostos.</p>
+          <img src="assets/imgs/tour-acuario.jpg" alt="Tour Acuario y Haynes Cay" class="incluye-img">
+          <div class="incluye-body">
+            <h4>🐠 Tour Acuario & Haynes Cay</h4>
+            <p>Sumérgete en piscinas naturales con peces de colores y mantarrayas en agua cristalina.</p>
           </div>
         </div>
 
         <div class="incluye-item">
-          <div class="incluye-icon">🚐</div>
-          <div class="incluye-text">
-            <h4>Traslados Aeropuerto</h4>
-            <p>Te recogemos a tu llegada al aeropuerto y te llevamos de regreso para tu vuelo.</p>
+          <img src="assets/imgs/tour-isla.jpg" alt="Vuelta a la Isla" class="incluye-img">
+          <div class="incluye-body">
+            <h4>🌴 Vuelta a la Isla</h4>
+            <p>Recorrido panorámico por los mejores puntos costeros, playas vírgenes y paisajes típicos.</p>
           </div>
         </div>
 
         <div class="incluye-item">
-          <div class="incluye-icon">🏨</div>
-          <div class="incluye-text">
-            <h4>Alojamiento 4 Días / 3 Noches</h4>
-            <p>En el hotel que tú elijas, con la acomodación y comodidad seleccionada.</p>
-          </div>
-        </div>
-
-        <div class="incluye-item">
-          <div class="incluye-icon">🍽️</div>
-          <div class="incluye-text">
-            <h4>Alimentación según Plan</h4>
-            <p>Desde solo desayunos (PC) hasta Todo Incluido con bar abierto y snacks (PAE).</p>
-          </div>
-        </div>
-
-        <div class="incluye-item">
-          <div class="incluye-icon">🚤</div>
-          <div class="incluye-text">
-            <h4>Paseos en la Isla Incluidos</h4>
-            <p>Tour al Acuario, Haynes Cay y Vuelta a la Isla (Portofino incluye tour bahía).</p>
-          </div>
-        </div>
-
-        <div class="incluye-item">
-          <div class="incluye-icon">🩺</div>
-          <div class="incluye-text">
-            <h4>Asistencia Médica</h4>
-            <p>Tarjeta Colasistencia médica e impuestos locales cubiertos durante tu estadía.</p>
-          </div>
-        </div>
-
-        <div class="incluye-item">
-          <div class="incluye-icon">👩‍💼</div>
-          <div class="incluye-text">
-            <h4>Asesoría Personalizada Viajá</h4>
-            <p>Te acompañamos por WhatsApp antes, durante y después de tu viaje.</p>
+          <img src="assets/imgs/img-san andres-2.jpeg" alt="Alojamiento 4 Días" class="incluye-img">
+          <div class="incluye-body">
+            <h4>🏨 4 Días / 3 Noches de Hotel</h4>
+            <p>Alojamiento según el hotel de tu preferencia con equipaje de bodega de 23 kg y traslados.</p>
           </div>
         </div>
       </div>
 
       <!-- TRANSPARENCIA -->
       <div class="transparency-box">
-        <span style="font-size: 1.5rem;">💡</span>
+        <span style="font-size: 1.6rem;">💡</span>
         <div>
-          <strong>Transparencia total Viajá:</strong> No incluye Tarjeta de Turismo de entrada a la isla (aprox. $153.000 fijada por la Gobernación Departamental) ni gastos personales no descritos. ¡Cero letras pequeñas ocultas!
+          <strong>Transparencia total Viajá:</strong> Incluye equipaje de 23kg en bodega, traslados y asistencia médica Colasistencia. No incluye Tarjeta de Turismo de entrada a la isla (aprox. $153.000 fijada por la Gobernación Departamental) ni gastos personales. ¡Cero letras pequeñas ocultas!
         </div>
       </div>
     </div>
   </section>
 
-  <!-- PLAN DE PAGOS Y CUOTAS CON FONDO FOTOGRÁFICO DE PLAYA -->
+  <!-- PLAN DE PAGOS Y CUOTAS CON FONDO PANORÁMICO REAL DE SAN ANDRÉS -->
   <section id="cuotas" class="cuotas-section">
     <div class="container">
       <div class="cuotas-card">
@@ -1124,7 +1157,7 @@
         <div class="asesor-info">
           <h4>Asesoría Directa con Viajá</h4>
           <p>Atención personalizada al WhatsApp <strong>+57 301 358 8413</strong></p>
-          <p style="font-size: 0.78rem; color: var(--text-light); margin-top: 4px;">Registro Nacional de Turismo RNT. 95174</p>
+          <p style="font-size: 0.82rem; color: var(--text-light); margin-top: 4px;">Registro Nacional de Turismo RNT. 95174</p>
         </div>
         <a href="https://wa.me/573013588413?text=%C2%A1Hola!%20Quiero%20asesorarme%20para%20viajar%20a%20San%20Andr%C3%A9s%20con%20Viaj%C3%A1." 
            class="btn-nav-wa" target="_blank" rel="noopener">
@@ -1153,10 +1186,11 @@
 
   <!-- LÓGICA INTERACTIVA DEL COTIZADOR -->
   <script>
-    // BASE DE DATOS DE HOTELES DEL AFICHE
+    // BASE DE DATOS DE HOTELES CON FOTOGRAFÍAS LOCALES REALES
     const hoteles = [
       {
         nombre: "Belavir",
+        imagen: "assets/imgs/hotel-belavir.jpg",
         plan: "PC",
         planNombre: "Solo Desayuno (PC)",
         destacado: "Opción Más Económica",
@@ -1166,6 +1200,7 @@
       },
       {
         nombre: "Blue Island Hotel",
+        imagen: "assets/imgs/hotel-blueisland.jpg",
         plan: "PC",
         planNombre: "Solo Desayuno (PC)",
         destacado: "Céntrico y Cómodo",
@@ -1175,6 +1210,7 @@
       },
       {
         nombre: "Isla Bonita (Hab. Estándar)",
+        imagen: "assets/imgs/hotel-islabonita.jpg",
         plan: "PC",
         planNombre: "Solo Desayuno (PC)",
         destacado: "Ambiente Isleño",
@@ -1184,6 +1220,7 @@
       },
       {
         nombre: "El Vecino",
+        imagen: "assets/imgs/hotel-elvecino.jpg",
         plan: "PAM",
         planNombre: "Desayuno + Cena (PAM)",
         destacado: "Mejor Relación Calidad-Precio",
@@ -1193,6 +1230,7 @@
       },
       {
         nombre: "Ocean Blue Beach",
+        imagen: "assets/imgs/hotel-oceanblue.jpg",
         plan: "PAM",
         planNombre: "Desayuno + Cena (PAM)",
         destacado: "Cerca a la Playa",
@@ -1202,6 +1240,7 @@
       },
       {
         nombre: "Koray (Hab. Estándar)",
+        imagen: "assets/imgs/hotel-koray.jpg",
         plan: "PC",
         planNombre: "Solo Desayuno (PC)",
         destacado: "Estilo Relajado",
@@ -1211,6 +1250,7 @@
       },
       {
         nombre: "Portofino Caribe",
+        imagen: "assets/imgs/hotel-portofino.jpg",
         plan: "PA",
         planNombre: "Desayuno, Almuerzo y Cena (PA)",
         destacado: "3 Comidas + Tour Bahía",
@@ -1220,6 +1260,7 @@
       },
       {
         nombre: "Verdemar",
+        imagen: "assets/imgs/hotel-verdemar.jpg",
         plan: "PAM",
         planNombre: "Desayuno + Cena (PAM)",
         destacado: "Zona Rosa y Playas",
@@ -1229,6 +1270,7 @@
       },
       {
         nombre: "GHL Sunrise V.I",
+        imagen: "assets/imgs/hotel-ghl.jpg",
         plan: "PC",
         planNombre: "Solo Desayuno (PC)",
         destacado: "Resort con Piscina Marina",
@@ -1238,6 +1280,7 @@
       },
       {
         nombre: "Tiuna",
+        imagen: "assets/imgs/hotel-tiuna.jpg",
         plan: "PAE",
         planNombre: "Todo Incluido con Bar Abierto (PAE)",
         destacado: "Favorito: Cero Preocupaciones",
@@ -1293,22 +1336,25 @@
 
         card.innerHTML = `
           <div>
-            ${hotel.destacado ? `<div class="hotel-badge-top ${hotel.esHighlight ? 'highlight' : ''}">${hotel.destacado}</div>` : ''}
-            <span class="hotel-plan-tag">${hotel.planNombre}</span>
-            <h4 class="hotel-name">${hotel.nombre}</h4>
-            <ul class="hotel-features">
-              ${hotel.features.map(f => `<li>${f}</li>`).join('')}
-            </ul>
-          </div>
-          <div>
-            <div class="hotel-price-box">
-              <div class="hotel-price-label">Valor por persona</div>
-              <div class="hotel-price-amount">${formatPesos(precio)}</div>
-              <div class="hotel-installments">💳 Separas hoy con solo $200.000</div>
+            <div class="hotel-img-wrap">
+              <img src="${hotel.imagen}" alt="${hotel.nombre}" class="hotel-thumb" loading="lazy">
+              ${hotel.destacado ? `<div class="hotel-badge-top ${hotel.esHighlight ? 'highlight' : ''}">${hotel.destacado}</div>` : ''}
+              <span class="hotel-plan-tag-overlay">${hotel.planNombre}</span>
             </div>
-            <a href="${waUrl}" class="btn-reserve-wa" target="_blank" rel="noopener">
-              <span>💬 Consultar Hotel en WhatsApp</span>
-            </a>
+            <div class="hotel-body">
+              <h4 class="hotel-name">${hotel.nombre}</h4>
+              <ul class="hotel-features">
+                ${hotel.features.map(f => `<li>${f}</li>`).join('')}
+              </ul>
+              <div class="hotel-price-box">
+                <div class="hotel-price-label">Valor por persona</div>
+                <div class="hotel-price-amount">${formatPesos(precio)}</div>
+                <div class="hotel-installments">💳 Separas hoy con solo $200.000</div>
+              </div>
+              <a href="${waUrl}" class="btn-reserve-wa" target="_blank" rel="noopener">
+                <span>💬 Consultar Hotel en WhatsApp</span>
+              </a>
+            </div>
           </div>
         `;
 
